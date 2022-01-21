@@ -336,10 +336,12 @@
   resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-6.1.2.tgz#4573adad159cf482b1895a1760766745997bd142"
   integrity sha512-kP/l3CEsBlr60dwo+fYaIU6IolNQ6j2756FhcW8OChVCJYtQc/dmJvOyOUdVpYelnYz2IJKqJKJ+K804MkRntA==
 
-"@ngrx/router-store@6.1.2":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-6.1.2.tgz#63bfcd3710c53ea2c5456b82c57fd433e5af25bc"
-  integrity sha512-sj083ZYrx0aY+vU/t8Ub0KYDHcMpatXJIOJR/eDNSuH54fPiBM9MrdI3hs/XHoXHxSaHOJoZ7f6I8XcUeptxyA==
+"@ngrx/router-store@13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-13.0.2.tgz#e57084cd74071760378645417bba94805c8b4514"
+  integrity sha512-XrzHjrD2hhnXdGeIpQm/msN77hoAL/QD3ZYGFJs3yT5d3x/T3L1JFlra7wC0OlKJkOs6zAh5Kz9cJ94YO/TEtQ==
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngrx/store-devtools@13.0.2":
   version "13.0.2"
