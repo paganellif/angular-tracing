@@ -341,10 +341,12 @@
   resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-6.1.2.tgz#63bfcd3710c53ea2c5456b82c57fd433e5af25bc"
   integrity sha512-sj083ZYrx0aY+vU/t8Ub0KYDHcMpatXJIOJR/eDNSuH54fPiBM9MrdI3hs/XHoXHxSaHOJoZ7f6I8XcUeptxyA==
 
-"@ngrx/store-devtools@6.1.2":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-6.1.2.tgz#b9cb8d6bcd7ee0d171dde86c9bdd5e6a5bc5563a"
-  integrity sha512-hvWMKcRIAtAFb2lb4woRenPHPgOiLFjy8R2PtCiw4uP3WrBVB4JHqUuP230/iRMcU5XmySp+LhNqhkk1zsoUqQ==
+"@ngrx/store-devtools@13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-13.0.2.tgz#2b412fe47894fbb0c2aec8c1402f150bc139d5e9"
+  integrity sha512-fcQ5A7cv9PONFvqlpFPXHswWjEflJvqrNt6wmywlxMtJDjkgzCHpvRiJqup/FiTosblRERoeZXN0oHW3Er3+rw==
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngrx/store@6.1.2":
   version "6.1.2"
@@ -8107,6 +8109,11 @@ tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+
+tslib@^2.0.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tslint@5.11.0:
   version "5.11.0"
