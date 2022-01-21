@@ -61,7 +61,7 @@
     "rxjs": "6.3.3",
     "tslib": "1.9.3",
     "url-parse": "1.4.4",
-    "zipkin": "0.16.0",
+    "zipkin": "0.22.0",
     "zipkin-transport-http": "0.16.0",
     "zone.js": "0.8.26"
   },
