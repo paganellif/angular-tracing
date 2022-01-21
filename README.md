@@ -2,7 +2,7 @@
 
 Distributed tracing for Angular applications.
 
-_Note_: This library is currently a heavy work in progress so expect there to be breaking changes.
+**NB: FORK OF https://github.com/ewhauser/angular-tracing - https://www.npmjs.com/package/angular-tracing**
 
 # Goals
 
@@ -11,17 +11,6 @@ _Note_: This library is currently a heavy work in progress so expect there to be
 - Tracing integration for Angular's HttpClient
 - Tracing library independent (without providing leaky abstractions)
 
-# Demo
-
-- Download the repo
-- Run `yarn quick` (requires Docker to be installed)
-- Open http://localhost:4200 and click through some page
-- Open the Zipkin UI at http://localhost:9411 and view the traces
-
-![Browser traces in Zipkin](https://user-images.githubusercontent.com/131389/49890350-b67a8680-fdf8-11e8-97ac-9d2c815621ec.png)
-
-You can view the source of the example Angular application being traced under `apps/heroes-villains`.
-
 # Usage
 
 ## Configuration
@@ -29,10 +18,8 @@ You can view the source of the example Angular application being traced under `a
 Add the required modules:
 
 ```console
-$ yarn add @angular-tracing/zipkin zipkin zipkin-transport-http
+$ yarn add @tracing-zipkin-angular/zipkin zipkin zipkin-transport-http empty
 ```
-
-You'll need to use this [workaround](https://github.com/openzipkin/zipkin-js#typescript) for compiling with `zipkin-transport-http` (note that there are current issues with the Zipkin `0.15.0` release so please use `0.14.3`.
 
 Then add the tracing module to your `app.module`:
 
@@ -196,11 +183,3 @@ There are a number of tracing libraries available including:
 
 This library currently only has an implementation for sending traces to Zipkin, but the intent is not to be opinated on which tracing library you use. However, this library is opinionated in the fact that the underlying tracing system should be directly exposed to the user (i.e. we are not going to provide a leaky abstraction over all distributed tracing systems). You'll notice in the examples above the all of the code directly references Zipkin's `Tracer` class. The only abstraction provided is
 root span locator - which is necessary in a single page web application.
-
-# Development
-
-- This repository is a [nx](https://nrwl.io/nx) / Angular CLI based repository
-- The easiest way to develop is by running the end to end example using `yarn quick`.
-- Tests are run via `karma` by running `yarn test`
-
-Please see the open issues in the repo for discussion on bugs/enhancements.
