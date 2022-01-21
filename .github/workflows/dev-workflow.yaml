@@ -2,7 +2,7 @@ name: Dev Workflow
 
 on:
   push:
-    branches: [dev, master, 'renovate/*']
+    branches: [dev, master]
   pull_request:
 
 jobs:
