@@ -1,13 +1,13 @@
 {
-  "name": "@angular-tracing/core",
-  "version": "0.0.16",
+  "name": "@tracing-zipkin-angular/core",
+  "version": "0.0.1",
   "description": "A distributed tracing library for use with Angular",
-  "author": "Eric Hauser",
+  "author": "Filippo Paganelli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ewhauser/angular-tracing.git"
+    "url": "https://github.com/paganellif/angular-tracing.git"
   },
-  "homepage": "https://github.com/ewhauser/angular-tracing.git",
+  "homepage": "https://github.com/paganellif/angular-tracing.git",
   "keywords": [
     "angular",
     "tracing"
