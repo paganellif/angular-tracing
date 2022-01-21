@@ -1,5 +1,5 @@
 {
-  "npmScope": "angular-tracing",
+  "npmScope": "tracing-zipkin-angular",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,9 +8,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "heroes-villains": {
-      "tags": []
-    },
     "zipkin": {
       "tags": []
     }
