@@ -2,10 +2,10 @@ name: Publish Package to npmjs
 
 on:
   push:
-    branches: [master]
+    tags: ['*']
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
