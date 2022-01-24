@@ -93,7 +93,7 @@
     "ng-packagr": "4.7.1",
     "prettier": "1.19.1",
     "pretty-quick": "1.11.1",
-    "protractor": "5.4.1",
+    "protractor": "5.4.4",
     "ts-node": "7.0.1",
     "tsickle": "0.34.0",
     "tslint": "5.20.1",
