@@ -1269,10 +1269,10 @@
     "@angular-devkit/core" "8.3.23"
     "@angular-devkit/schematics" "8.3.23"
 
-"@nrwl/nx@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.1.1.tgz#cc0483f66024fd4854d4a14a89da6064121afae6"
-  integrity sha512-2K9WuS8MSdX/PCtUFE6ged2mnwSE1g6iS7ViGJSNAvLje7RzBDUH+9LTKYa3RKOTVO3R4kOJjKRhXed2HDAucA==
+"@nrwl/nx@7.8.7":
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.8.7.tgz#a85dc5ab30d33ac6cc2234bbc51e229ad85b9b9b"
+  integrity sha512-a/pOozIT86IIWue6MSwN2EKO4grJ8My7QMl+g535/vrDg75riyBTkWF+nX6VM/JjGz40Y5nFZaX94924cZWt5g==
 
 "@nrwl/schematics@8.12.11":
   version "8.12.11"
@@ -7686,15 +7686,15 @@ prepend-http@^1.0.1:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@1.19.1:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
-  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
-
 prettier@1.16.4:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
+
+prettier@1.19.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
 
 pretty-quick@1.11.1:
   version "1.11.1"
@@ -9676,7 +9676,7 @@ type-fest@^0.8.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-type-is@~1.6.16, type-is@~1.6.18:
+type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
   integrity sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
