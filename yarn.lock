@@ -1269,10 +1269,10 @@
     "@angular-devkit/core" "8.3.23"
     "@angular-devkit/schematics" "8.3.23"
 
-"@nrwl/nx@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.1.1.tgz#cc0483f66024fd4854d4a14a89da6064121afae6"
-  integrity sha512-2K9WuS8MSdX/PCtUFE6ged2mnwSE1g6iS7ViGJSNAvLje7RzBDUH+9LTKYa3RKOTVO3R4kOJjKRhXed2HDAucA==
+"@nrwl/nx@7.8.7":
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.8.7.tgz#a85dc5ab30d33ac6cc2234bbc51e229ad85b9b9b"
+  integrity sha512-a/pOozIT86IIWue6MSwN2EKO4grJ8My7QMl+g535/vrDg75riyBTkWF+nX6VM/JjGz40Y5nFZaX94924cZWt5g==
 
 "@nrwl/schematics@8.12.11":
   version "8.12.11"
