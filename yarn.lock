@@ -409,18 +409,20 @@
   resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-7.1.1.tgz#cc0483f66024fd4854d4a14a89da6064121afae6"
   integrity sha512-2K9WuS8MSdX/PCtUFE6ged2mnwSE1g6iS7ViGJSNAvLje7RzBDUH+9LTKYa3RKOTVO3R4kOJjKRhXed2HDAucA==
 
-"@nrwl/schematics@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@nrwl/schematics/-/schematics-7.1.1.tgz#1dc45fc123cb00b6ef3ca626b05881758311e937"
-  integrity sha512-w44kAAFkomcZgmscQqI0/TbN/rF0ZX2SncJjQE70cLnomWfNpD18oqVzU+8PHtbhmd2TyWZ7tcDQAn6zdioUlQ==
+"@nrwl/schematics@7.8.7":
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/schematics/-/schematics-7.8.7.tgz#e9d4c2c7c6ab11eece414ce79186b32248e484b0"
+  integrity sha512-ebxqnVKyAEG/i4f4669X0Q4GZhvekKmbz447UV2QwqsqqCRCwCCAYly4P5HX+tFJgneODeeY7qv/8D9F9+kfAg==
   dependencies:
-    "@types/yargs" "^11.0.0"
     app-root-path "^2.0.1"
     cosmiconfig "4.0.0"
     fs-extra "6.0.0"
     graphviz "0.0.8"
+    ignore "5.0.4"
     npm-run-all "4.1.5"
     opn "^5.3.0"
+    prettier "1.16.4"
+    rxjs "6.3.3"
     semver "5.4.1"
     strip-json-comments "2.0.1"
     tmp "0.0.33"
@@ -523,11 +525,6 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
-
-"@types/yargs@^11.0.0":
-  version "11.1.8"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-11.1.8.tgz#b730ecb2bde209d12194cdf8bf9f12c4bd21965a"
-  integrity sha512-49Pmk3GBUOrs/ZKJodGMJeEeiulv2VdfAYpGgkTCSXpNWx7KCX36+PbrkItwzrjTDHO2QoEZDpbhFoMN1lxe9A==
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
@@ -4061,6 +4058,11 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
+ignore@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.0.4.tgz#33168af4a21e99b00c5d41cbadb6a6cb49903a45"
+  integrity sha512-WLsTMEhsQuXpCiG173+f3aymI43SXa+fB1rSfbzyP4GkPP+ZFVuO0/3sFUGNBtifisPeDcl/uD/Y2NxZ7xFq4g==
+
 ignore@^3.3.5, ignore@^3.3.7:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
@@ -6650,6 +6652,11 @@ prettier@1.15.2:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.2.tgz#d31abe22afa4351efa14c7f8b94b58bb7452205e"
   integrity sha512-YgPLFFA0CdKL4Eg2IHtUSjzj/BWgszDHiNQAe0VAIBse34148whfdzLagRL+QiKS+YfK5ftB6X4v/MBw8yCoug==
+
+prettier@1.16.4:
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
+  integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
 
 pretty-quick@1.11.1:
   version "1.11.1"
