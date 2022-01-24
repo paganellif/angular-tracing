@@ -71,7 +71,7 @@
     "@angular-devkit/schematics": "7.3.8",
     "@angular/cli": "7.3.8",
     "@angular/compiler-cli": "7.2.13",
-    "@angular/language-service": "7.2.13",
+    "@angular/language-service": "7.2.16",
     "@nrwl/schematics": "8.12.11",
     "@types/jasmine": "3.3.1",
     "@types/jasminewd2": "2.0.6",
