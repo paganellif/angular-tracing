@@ -34,7 +34,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@angular/animations": "7.2.13",
+    "@angular/animations": "7.2.16",
     "@angular/common": "7.2.13",
     "@angular/compiler": "7.2.13",
     "@angular/core": "7.2.13",
