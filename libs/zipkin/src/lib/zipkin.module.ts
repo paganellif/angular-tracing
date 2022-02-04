@@ -99,7 +99,7 @@ export class ZipkinModule {
    * Configures the module for use at the root level of the application. If you use this method, then it is
    * expected that you are injecting the configuration via DI.
    */
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<ZipkinModule> {
     return {
       ngModule: ZipkinModule,
       providers: TRACE_PROVIDERS
@@ -111,7 +111,7 @@ export class ZipkinModule {
    *
    * @param options the module options
    */
-  static forRootWithConfig(options: TraceModuleOptions<ZipkinTraceProviderOptions>): ModuleWithProviders {
+  static forRootWithConfig(options: TraceModuleOptions<ZipkinTraceProviderOptions>): ModuleWithProviders<ZipkinModule> {
     return {
       ngModule: ZipkinModule,
       providers: [
