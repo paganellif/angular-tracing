@@ -14,8 +14,8 @@
           "options": {
             "tsConfig": "libs/zipkin/tsconfig.lib.json",
             "project": "libs/zipkin/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "libs/zipkin/tsconfig.lib.prod.json"
             }
