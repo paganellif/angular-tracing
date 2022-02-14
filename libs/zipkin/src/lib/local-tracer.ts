@@ -14,7 +14,7 @@ export class LocalTracer {
 
   private traceId: TraceId | undefined;
 
-  constructor(@Inject(TRACE_LOCAL_SERVICE_NAME) private localServiceName: string, private tracer: zipkin.Tracer) {}
+  constructor(@Inject(TRACE_LOCAL_SERVICE_NAME) private localServiceName: string, private tracer: zipkin.LocalTracer) {}
 
   private static peek() {
     return LocalTracer.localStack.length > 0 ? LocalTracer.localStack[LocalTracer.localStack.length - 1] : undefined;
