@@ -4,7 +4,7 @@ import { NavigationStart, Router } from '@angular/router';
 import { NgZone } from '@angular/core';
 
 import * as zipkin from 'zipkin';
-import { BatchRecorder, ConsoleRecorder, jsonEncoder, Recorder } from 'zipkin';
+import { BatchRecorder, ConsoleRecorder, jsonEncoder, Recorder, Tracer } from 'zipkin';
 import { HttpLogger } from 'zipkin-transport-http';
 import alwaysSample = zipkin.sampler.alwaysSample;
 import Sampler = zipkin.sampler.Sampler;
@@ -23,8 +23,9 @@ import {
   TRACE_MODULE_CONFIGURATION,
   TRACE_ROOT_TOKEN,
   ZIPKIN_RECORDER,
-  ZIPKIN_SAMPLER
+  ZIPKIN_SAMPLER,
 } from './injection-tokens';
+import { ZIPKIN_TRACER } from '..';
 
 export const TRACE_DIRECTIVES = [ZipkinTraceDirective];
 
@@ -32,39 +33,39 @@ const TRACE_PROVIDERS = [
   {
     provide: TRACE_ROOT_TOKEN,
     useExisting: ZipkinTraceRoot,
-    deps: [TRACE_LOCAL_SERVICE_NAME, Router, ZIPKIN_RECORDER, ZIPKIN_SAMPLER]
+    deps: [TRACE_LOCAL_SERVICE_NAME, Router, ZIPKIN_RECORDER, ZIPKIN_SAMPLER],
   },
   {
     multi: true,
     provide: HTTP_INTERCEPTORS,
     useExisting: ZipkinHttpInterceptor,
-    deps: [TRACE_HTTP_REMOTE_MAPPINGS, TRACE_ROOT_TOKEN, TRACE_LOCAL_SERVICE_NAME, TRACE_HTTP_PARTICIPATION_STRATEGY]
+    deps: [TRACE_HTTP_REMOTE_MAPPINGS, TRACE_ROOT_TOKEN, TRACE_LOCAL_SERVICE_NAME, TRACE_HTTP_PARTICIPATION_STRATEGY],
   },
   {
     provide: TRACE_LOCAL_SERVICE_NAME,
     useFactory: getLocalServiceName,
-    deps: [TRACE_MODULE_CONFIGURATION]
+    deps: [TRACE_MODULE_CONFIGURATION],
   },
   {
     provide: ZIPKIN_RECORDER,
     useFactory: getRecorder,
-    deps: [TRACE_MODULE_CONFIGURATION, NgZone]
+    deps: [TRACE_MODULE_CONFIGURATION, NgZone],
   },
   {
     provide: ZIPKIN_SAMPLER,
     useFactory: getSampler,
-    deps: [TRACE_MODULE_CONFIGURATION]
+    deps: [TRACE_MODULE_CONFIGURATION],
   },
   {
     provide: TRACE_HTTP_REMOTE_MAPPINGS,
     useFactory: getRemoteServiceMappings,
-    deps: [TRACE_MODULE_CONFIGURATION]
+    deps: [TRACE_MODULE_CONFIGURATION],
   },
   {
     provide: TRACE_HTTP_PARTICIPATION_STRATEGY,
     useFactory: getTraceParticipationStrategy,
-    deps: [TRACE_MODULE_CONFIGURATION]
-  }
+    deps: [TRACE_MODULE_CONFIGURATION],
+  },
 ];
 
 /**
@@ -78,7 +79,7 @@ const TRACE_PROVIDERS = [
  */
 @NgModule({
   declarations: TRACE_DIRECTIVES,
-  exports: TRACE_DIRECTIVES
+  exports: TRACE_DIRECTIVES,
 })
 export class ZipkinModule {
   /**
@@ -88,7 +89,7 @@ export class ZipkinModule {
    * @param traceRoot
    */
   constructor(private router: Router, private traceRoot: ZipkinTraceRoot) {
-    this.router.events.subscribe(e => {
+    this.router.events.subscribe((e) => {
       if (e instanceof NavigationStart) {
         this.traceRoot.clear();
       }
@@ -99,10 +100,10 @@ export class ZipkinModule {
    * Configures the module for use at the root level of the application. If you use this method, then it is
    * expected that you are injecting the configuration via DI.
    */
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<ZipkinModule> {
     return {
       ngModule: ZipkinModule,
-      providers: TRACE_PROVIDERS
+      providers: TRACE_PROVIDERS,
     };
   }
 
@@ -111,16 +112,16 @@ export class ZipkinModule {
    *
    * @param options the module options
    */
-  static forRootWithConfig(options: TraceModuleOptions<ZipkinTraceProviderOptions>): ModuleWithProviders {
+  static forRootWithConfig(options: TraceModuleOptions<ZipkinTraceProviderOptions>): ModuleWithProviders<ZipkinModule> {
     return {
       ngModule: ZipkinModule,
       providers: [
         {
           provide: TRACE_MODULE_CONFIGURATION,
-          useValue: options
+          useValue: options,
         },
-        ...TRACE_PROVIDERS
-      ]
+        ...TRACE_PROVIDERS,
+      ],
     };
   }
 }
@@ -141,8 +142,8 @@ export function getRecorder(options: TraceModuleOptions<ZipkinTraceProviderOptio
       recorder = new BatchRecorder({
         logger: new HttpLogger({
           endpoint: `${zipkinBaseUrl}/api/v2/spans`,
-          jsonEncoder: jsonEncoder.JSON_V2
-        })
+          jsonEncoder: jsonEncoder.JSON_V2,
+        }),
       });
     });
   }

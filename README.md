@@ -30,13 +30,18 @@ Then add the tracing module to your `app.module`:
     ...
     ZipkinModule.forRootWithConfig({
       traceProvider: {
+        zipkinBaseUrl: 'http://localhost:9411',
         http: {
           remoteServiceMapping: {
             all: /.*/
           }
         },
         logToConsole: true
-      }
+      },
+      defaultTags: {
+        tagKey1: 'tagValue1',
+        tagKey2: 'tagValue2',
+      },
     })
   ],
   providers: [],
@@ -172,14 +177,3 @@ Or log a message:
   [id]="user.id"
 ></app-user-component>
 ```
-
-# Tracing Libraries
-
-There are a number of tracing libraries available including:
-
-- Zipkin
-- OpenCensus (no browser compatible library at the moment)
-- OpenTracing
-
-This library currently only has an implementation for sending traces to Zipkin, but the intent is not to be opinated on which tracing library you use. However, this library is opinionated in the fact that the underlying tracing system should be directly exposed to the user (i.e. we are not going to provide a leaky abstraction over all distributed tracing systems). You'll notice in the examples above the all of the code directly references Zipkin's `Tracer` class. The only abstraction provided is
-root span locator - which is necessary in a single page web application.

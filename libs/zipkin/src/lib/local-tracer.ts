@@ -1,20 +1,23 @@
 import { Inject, Injectable } from '@angular/core';
 import * as zipkin from 'zipkin';
-import { TraceId } from 'zipkin';
+import { TraceId, Tracer } from 'zipkin';
 import LocalOperationStart = zipkin.Annotation.LocalOperationStart;
 import LocalOperationStop = zipkin.Annotation.LocalOperationStop;
 
-import { TRACE_LOCAL_SERVICE_NAME } from './injection-tokens';
+import { TRACE_LOCAL_SERVICE_NAME, ZIPKIN_TRACER } from './injection-tokens';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalTracer {
   private static readonly localStack: TraceId[] = [];
 
-  private traceId: TraceId | undefined;
+  private traceId!: TraceId;
 
-  constructor(@Inject(TRACE_LOCAL_SERVICE_NAME) private localServiceName: string, private tracer: zipkin.Tracer) {}
+  constructor(
+    @Inject(TRACE_LOCAL_SERVICE_NAME) private localServiceName: string,
+    @Inject(ZIPKIN_TRACER) private tracer: Tracer
+  ) {}
 
   private static peek() {
     return LocalTracer.localStack.length > 0 ? LocalTracer.localStack[LocalTracer.localStack.length - 1] : undefined;

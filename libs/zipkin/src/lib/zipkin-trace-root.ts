@@ -48,7 +48,6 @@ export class ZipkinTraceRoot implements TraceRoot<Tracer> {
       recorder,
       localServiceName,
       sampler: this.sample,
-      // Enable this once on the latest version of zipkin-js: https://github.com/ewhauser/angular-tracing/issues/5
       defaultTags: this.config.defaultTags || {}
     };
   }
@@ -74,9 +73,10 @@ export class ZipkinTraceRoot implements TraceRoot<Tracer> {
       this.componentTracer = this.localTracer();
       this.componentTracer.startSpan(name);
       this.componentTracer.putTag('/window/location/href', window.location.href);
-      for (let key in this.config.defaultTags) {
-        this.componentTracer.putTag(key, this.config.defaultTags[key]);
-      }
+      if (this.config.defaultTags !== undefined)
+        for (let key in this.config.defaultTags) {
+          this.componentTracer.putTag(key, this.config.defaultTags[key]);
+        }
     }
     return currentTracer;
   }

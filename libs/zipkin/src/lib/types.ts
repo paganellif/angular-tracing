@@ -48,7 +48,7 @@ export interface HttpTraceableOptions {
  * Options for the trace module.
  */
 export interface TraceModuleOptions<T> {
-  defaultTags: {};
+  defaultTags?: {};
   /**
    * The name of the local service. Defaults to 'browser' if not specified'
    */
