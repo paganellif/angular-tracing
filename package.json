@@ -75,7 +75,7 @@
     "@types/jasminewd2": "2.0.10",
     "@types/node": "^12.11.1",
     "@types/url-parse": "1.4.7",
-    "codelyzer": "^5.1.2",
+    "codelyzer": "^6.0.0",
     "concurrently": "7.0.0",
     "husky": "7.0.4",
     "jasmine-core": "4.0.0",
