@@ -16,7 +16,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@tracing-zipkin-angular'
       - run: yarn
-      - run: yarn build:libs
+      - run: yarn build:libs:prod
       - run: cp README.md dist/libs/zipkin && cd dist/libs/zipkin && yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
