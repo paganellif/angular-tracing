@@ -13,3 +13,5 @@ export const TRACE_HTTP_REMOTE_MAPPINGS = new InjectionToken<string>('TRACE_REMO
 export const ZIPKIN_SAMPLER = new InjectionToken<string>('ZIPKIN_SAMPLER');
 
 export const ZIPKIN_RECORDER = new InjectionToken<string>('ZIPKIN_RECORDER');
+
+export const ZIPKIN_TRACER = new InjectionToken<string>('ZIPKIN_TRACER');
