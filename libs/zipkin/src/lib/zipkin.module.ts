@@ -66,10 +66,6 @@ const TRACE_PROVIDERS = [
     useFactory: getTraceParticipationStrategy,
     deps: [TRACE_MODULE_CONFIGURATION],
   },
-  {
-    provide: ZIPKIN_TRACER,
-    useClass: Tracer,
-  },
 ];
 
 /**
