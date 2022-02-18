@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "declarationMap": true,
     "outDir": "../../dist/out-tsc/libs/angular-tracing-zipkin",
     "types": []
   },
