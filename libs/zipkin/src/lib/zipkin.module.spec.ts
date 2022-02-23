@@ -16,7 +16,7 @@ import { ZipkinTraceRoot } from './zipkin-trace-root';
 
 const MODULES = [RouterModule, RouterTestingModule];
 
-function createModule(provider: Provider | ModuleWithProviders, providers: Provider[] = []) {
+function createModule(provider: Provider | ModuleWithProviders<any>, providers: Provider[] = []) {
   TestBed.configureTestingModule({
     imports: [...MODULES, provider],
     providers

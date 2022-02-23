@@ -1,6 +1,5 @@
 import { HttpTraceableOptions } from './types';
 
-import { Recorder } from 'zipkin';
 import * as zipkin from 'zipkin';
 import Sampler = zipkin.sampler.Sampler;
 
@@ -19,7 +18,7 @@ export interface ZipkinTraceProviderOptions {
   /**
    * The recorder to use
    */
-  recorder?: Recorder;
+  recorder?: zipkin.Recorder;
   /**
    * Indicates whether to enable HTTP tracing
    */

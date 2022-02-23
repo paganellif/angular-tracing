@@ -10,7 +10,7 @@
       "prefix": "tracing-zipkin-angular",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/zipkin/tsconfig.lib.json",
             "project": "libs/zipkin/ng-package.json"
@@ -41,7 +41,6 @@
   },
   "cli": {
     "warnings": {
-      "typescriptMismatch": false,
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/schematics"
