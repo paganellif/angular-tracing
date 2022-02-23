@@ -4,13 +4,12 @@ import { NavigationStart, Router } from '@angular/router';
 import { NgZone } from '@angular/core';
 
 import * as zipkin from 'zipkin';
-import { BatchRecorder, ConsoleRecorder, jsonEncoder, Recorder, Tracer } from 'zipkin';
+import { BatchRecorder, ConsoleRecorder, jsonEncoder } from 'zipkin';
 import { HttpLogger } from 'zipkin-transport-http';
 import alwaysSample = zipkin.sampler.alwaysSample;
 import Sampler = zipkin.sampler.Sampler;
 
 import { MultiplexingRecorder } from './multiplexing-recorder';
-import { LocalTracer } from './local-tracer';
 import { ZipkinHttpInterceptor } from './zipkin-http-interceptor';
 import { ZipkinTraceRoot } from './zipkin-trace-root';
 import { ZipkinTraceProviderOptions } from './zipkin-types';
@@ -133,7 +132,7 @@ export function getLocalServiceName(options: TraceModuleOptions<ZipkinTraceProvi
 export function getRecorder(options: TraceModuleOptions<ZipkinTraceProviderOptions>, zone: NgZone) {
   const traceProvider = options.traceProvider || {};
 
-  let recorder: Recorder;
+  let recorder: zipkin.Recorder;
   if (traceProvider.recorder) {
     recorder = traceProvider.recorder;
   } else {

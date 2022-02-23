@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 
 import * as zipkin from 'zipkin';
-import { ExplicitContext, Recorder, sampler, Tracer } from 'zipkin';
+import { ExplicitContext, sampler, Tracer } from 'zipkin';
 
 import { LocalTracer } from './local-tracer';
 import { TraceModuleOptions, TraceRoot } from './types';
@@ -40,7 +40,7 @@ export class ZipkinTraceRoot implements TraceRoot<Tracer> {
   constructor(
     @Inject(TRACE_LOCAL_SERVICE_NAME) public localServiceName: string,
     private router: Router,
-    @Inject(ZIPKIN_RECORDER) private recorder: Recorder,
+    @Inject(ZIPKIN_RECORDER) private recorder: zipkin.Recorder,
     @Inject(ZIPKIN_SAMPLER) private sample: sampler.Sampler,
     @Inject(TRACE_MODULE_CONFIGURATION) private config: TraceModuleOptions<ZipkinTraceProviderOptions>
   ) {

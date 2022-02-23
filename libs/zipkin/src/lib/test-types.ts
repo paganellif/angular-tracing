@@ -1,7 +1,6 @@
-import { Recorder } from 'zipkin';
 import * as zipkin from 'zipkin';
 
-export class TrackingRecorder implements Recorder {
+export class TrackingRecorder implements zipkin.Recorder {
   public records: zipkin.Record[] = [];
 
   record(rec: zipkin.Record): void {
