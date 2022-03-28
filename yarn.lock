@@ -1529,10 +1529,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/entity@13.0.2":
-  version "13.0.2"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-13.0.2.tgz#99fceb9f160de67106364e27299e242b1608affc"
-  integrity sha512-sAN/YDvDNy4fmCOWU8LfPp8YI8XJcvmO89XTRSoJjo3O9BIbCSEw2gYHe1V7gWHLY5Pr9wiMybKhd4RHtzFHgQ==
+"@ngrx/entity@13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-13.1.0.tgz#52d200a91d4677f144952175e02286779705c90d"
+  integrity sha512-G4eGDbKIy0sxs0ilA/D2q/aWo5GY39LrJhiLPgAYSNPllSSt3vUhBkihHni91nxtuk+HJ0eGbEHgfFlu6ruhVA==
   dependencies:
     tslib "^2.0.0"
 
