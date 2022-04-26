@@ -54,7 +54,7 @@
     "bulma": "0.9.3",
     "core-js": "2.6.12",
     "empty-module": "0.0.2",
-    "express": "4.17.3",
+    "express": "4.18.0",
     "ngrx-data": "6.1.0-beta.3",
     "rxjs": "7.5.5",
     "tslib": "^2.0.0",
