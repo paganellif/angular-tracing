@@ -70,7 +70,7 @@
     "@angular/compiler-cli": "12.2.16",
     "@angular/language-service": "12.2.16",
     "@nrwl/schematics": "8.12.11",
-    "@types/jasmine": "~4.0.0",
+    "@types/jasmine": "~4.3.0",
     "@types/jasminewd2": "2.0.10",
     "@types/node": "^18.0.0",
     "@types/url-parse": "1.4.8",
