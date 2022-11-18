@@ -61,7 +61,7 @@
     "url-parse": "1.5.10",
     "zipkin": "0.22.0",
     "zipkin-transport-http": "0.22.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.16",
