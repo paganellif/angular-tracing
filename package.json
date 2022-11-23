@@ -75,7 +75,7 @@
     "@types/node": "^18.0.0",
     "@types/url-parse": "1.4.8",
     "codelyzer": "^6.0.0",
-    "concurrently": "7.5.0",
+    "concurrently": "7.6.0",
     "husky": "8.0.2",
     "jasmine-core": "~4.5.0",
     "jasmine-marbles": "0.9.2",
